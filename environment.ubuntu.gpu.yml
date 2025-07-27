@@ -1,0 +1,18 @@
+name: solar
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+
+dependencies:
+  - python=3.7  # 保持与原配置兼容的Python主版本
+  - pandas
+  - numpy
+  - matplotlib
+  - tqdm
+  - rasterio
+  - scikit-learn
+  - fire
+  - pytorch  # GPU版本
+  - torchvision  # GPU版本
+  - cudatoolkit=11.3  # 匹配GPU驱动的CUDA版本

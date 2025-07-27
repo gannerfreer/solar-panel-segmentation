@@ -11,6 +11,6 @@ For readability, this code expects the downloaded folders to be renamed in the f
 
 [`3385789`](https://figshare.com/articles/Modesto_Aerial_USGS_Imagery_from_the_Distributed_Solar_Photovoltaic_Array_Location_and_Extent_Data_Set/3385789): `Modesto`
 
-[`33857804`](https://figshare.com/articles/Stockton_Aerial_USGS_Imagery_from_the_Distributed_Solar_Photovoltaic_Array_Location_and_Extent_Data_Set/3385804): `Stockton`
+[`3385804`](https://figshare.com/articles/Stockton_Aerial_USGS_Imagery_from_the_Distributed_Solar_Photovoltaic_Array_Location_and_Extent_Data_Set/3385804): `Stockton`
 
 [`3385807`](https://figshare.com/articles/Oxnard_Aerial_USGS_Imagery_from_the_Distributed_Solar_Photovoltaic_Array_Location_and_Extent_Data_Set/3385807): `Oxnard`

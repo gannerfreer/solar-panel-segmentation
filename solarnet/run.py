@@ -7,7 +7,7 @@ from tqdm import tqdm
 
 from solarnet.preprocessing import MaskMaker, ImageSplitter
 from solarnet.datasets import ClassifierDataset, SegmenterDataset, make_masks
-from solarnet.models import Classifier, Segmenter, train_classifier, train_segmenter
+from solarnet.models import Classifier, Segmenter, train_classifier, train_segmenter, SegmentationInference
 
 
 class RunTask:
@@ -195,3 +195,26 @@ class RunTask:
         self.train_segmenter(max_epochs=s_max_epochs, val_size=s_val_size, test_size=s_test_size,
                              warmup=s_warmup, patience=s_patience, use_classifier=True,
                              data_folder=data_folder, device=device)
+
+    @staticmethod
+    def model_reasoning(data_folder='data'):
+        data_folder = Path(data_folder)
+        model_dir = data_folder / 'models'
+        model_path = model_dir / 'segmenter.model'
+        print("test!!!!!")
+        print(f"Loading model from {model_path}")
+        device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+        infer = SegmentationInference()
+        model = infer.load_model(
+            model_path, 
+            device
+        )
+        
+        mask = infer.setp_forward(
+            model=model,
+            image_path='patch_81_8.png',
+            output_path="output_mask.npy",
+            visualize=True
+        )
+        
+        print(f"Segmentation mask shape: {mask.shape}")
